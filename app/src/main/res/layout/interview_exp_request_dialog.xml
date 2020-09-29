@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:src="@drawable/hello"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="10dp"></ImageView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Psst!"
+        android:textSize="26sp"
+        android:textColor="@color/black"></TextView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="12dp"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:textColor="@color/grey"
+        android:text="Sorry for interrupting! But, If you have got Placement or Internship offer, Please take a moment to share your interview experience. This will help our batch mates and juniors."></TextView>
+
+    <Button
+        android:id="@+id/okBtn"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/border"
+        android:textColor="@color/black"
+        android:layout_marginBottom="15dp"
+        android:text="ok"></Button>
+</LinearLayout>

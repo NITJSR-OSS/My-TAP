@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="all">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home"
+            android:title="@string/menu_home" />
+        <item
+            android:icon="@drawable/ic_brochure"
+            android:title="@string/menu_brochure"
+            android:onClick="placementBrochure"/>
+
+        <item
+            android:icon="@drawable/ic_website"
+            android:title="@string/menu_website"
+            android:onClick="openWebsite"/>
+
+        <item
+            android:icon="@drawable/ic_developer"
+            android:title="@string/menu_developer"
+            android:onClick="openDevActivity"/>
+
+        <item
+            android:icon="@drawable/ic_logout"
+            android:title="@string/menu_logout"
+            android:onClick="logout"/>
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:icon="@drawable/ic_menu_share"
+                android:title="@string/menu_share"
+                android:onClick="shareApp"/>
+            <item
+                android:icon="@drawable/ic_rate"
+                android:title="@string/menu_rate"
+                android:onClick="rateUs"/>
+            <item
+                android:icon="@drawable/ic_privacy"
+                android:title="@string/menu_privacy_policy"
+                android:onClick="privacyPolicy"/>
+        </menu>
+    </item>
+
+</menu>

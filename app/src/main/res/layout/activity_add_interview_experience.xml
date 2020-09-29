@@ -1,0 +1,742 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".AddInterviewExperience.AddInterviewExperienceActivity"
+    android:background="#EFF5FB"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#fff"
+        app:popupTheme="@style/AppTheme.PopupOverlay"
+        app:navigationIcon="@drawable/ic_arrow_back"
+        android:elevation="1dp"
+        tools:ignore="NotSibling">
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Share Experience"
+            android:textSize="16dp"
+            android:textAppearance="@style/bebasRegular"
+            android:textStyle="bold"/>
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.core.widget.NestedScrollView android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="8dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:text="If you study at NIT Jamshedpur and have got placement/Internship offer, Please spare few minutes of your schedule to share your honest interview experience!"/>
+
+            <!--Name-->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                app:cardElevation="@dimen/card_elevation"
+                app:cardCornerRadius="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_margin="12dp"
+                        android:textColor="#000"
+                        android:textSize="15dp"
+                        android:padding="4dp"
+                        android:focusableInTouchMode="true"
+                        android:focusable="true"
+                        android:layout_gravity="center_vertical"
+                        android:text="Name *"/>
+                    <requestFocus/>
+
+                    <EditText
+                        android:id="@+id/studName"
+                        android:layout_width="match_parent"
+                        android:hint="Your Full Name"
+                        android:padding="4dp"
+                        android:maxLines="1"
+                        android:inputType="text|textCapWords"
+                        android:textCursorDrawable="@null"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginBottom="15dp"
+                        android:layout_marginRight="12dp"
+                        android:layout_height="45dp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!--Branch-->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                app:cardElevation="@dimen/card_elevation"
+                app:cardCornerRadius="5dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_margin="12dp"
+                        android:textColor="#000"
+                        android:textSize="15dp"
+                        android:padding="4dp"
+                        android:layout_gravity="center_vertical"
+                        android:text="Branch *" />
+
+                    <Spinner
+                        android:id="@+id/branch"
+                        style="@android:style/Widget.Holo.Light.Spinner"
+                        android:layout_width="170dp"
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="12dp"
+                        android:layout_marginBottom="15dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/spinner_background"
+                        android:dropDownVerticalOffset="-53dp"
+                        android:spinnerMode="dialog"></Spinner>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!--whatsapp-->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                app:cardElevation="@dimen/card_elevation"
+                app:cardCornerRadius="5dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_margin="12dp"
+                        android:textColor="#000"
+                        android:textSize="15dp"
+                        android:padding="4dp"
+                        android:layout_gravity="center_vertical"
+                        android:text="WhatsApp Number"/>
+
+                    <EditText
+                        android:id="@+id/whatsappNum"
+                        android:layout_width="match_parent"
+                        android:hint="Your WhatsApp Number"
+                        android:autoLink="phone"
+                        android:padding="4dp"
+                        android:maxLines="1"
+                        android:inputType="phone"
+                        android:textCursorDrawable="@null"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginBottom="15dp"
+                        android:layout_marginRight="12dp"
+                        android:layout_height="45dp"/>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!--Linked In id-->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                app:cardElevation="@dimen/card_elevation"
+                app:cardCornerRadius="5dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_margin="12dp"
+                        android:textColor="#000"
+                        android:textSize="15dp"
+                        android:padding="4dp"
+                        android:layout_gravity="center_vertical"
+                        android:text="LinkedIn Id"/>
+
+                    <EditText
+                        android:id="@+id/linkedInId"
+                        android:layout_width="match_parent"
+                        android:hint="Your LinkedIn Id"
+                        android:padding="4dp"
+                        android:maxLines="1"
+                        android:inputType="textUri"
+                        android:textCursorDrawable="@null"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginBottom="15dp"
+                        android:layout_marginRight="12dp"
+                        android:layout_height="45dp"/>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!--is internship review-->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                app:cardElevation="@dimen/card_elevation"
+                app:cardCornerRadius="5dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_margin="12dp"
+                        android:textColor="#000"
+                        android:textSize="15dp"
+                        android:padding="4dp"
+                        android:layout_gravity="center_vertical"
+                        android:text="Is this an Internship Experience?"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:paddingLeft="4dp"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="No"></TextView>
+                    <Switch
+                        android:id="@+id/isInternshipReview"
+                        android:layout_width="62dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginRight="12dp"
+                        android:layout_marginBottom="15dp"
+                        android:layout_weight="1"
+                        android:checked="false"
+                        android:textOff="Off"
+                        android:textOn="On"
+                        android:textSize="15sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Yes"></TextView>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!--Company Name-->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                app:cardElevation="@dimen/card_elevation"
+                app:cardCornerRadius="5dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_margin="12dp"
+                        android:textColor="#000"
+                        android:textSize="15dp"
+                        android:padding="4dp"
+                        android:layout_gravity="center_vertical"
+                        android:text="Company Name *"/>
+
+                    <EditText
+                        android:id="@+id/companyName"
+                        android:hint="Name of the Company"
+                        android:padding="4dp"
+                        android:inputType="text|textCapWords"
+                        android:maxLines="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:textCursorDrawable="@null"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginBottom="15dp"
+                        android:layout_marginRight="12dp"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!--JOB TITLE-->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                app:cardElevation="@dimen/card_elevation"
+                app:cardCornerRadius="5dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_margin="12dp"
+                        android:textColor="#000"
+                        android:textSize="15dp"
+                        android:padding="4dp"
+                        android:layout_gravity="center_vertical"
+                        android:text="Job Title *"/>
+
+                    <EditText
+                        android:id="@+id/jobTitle"
+                        android:hint="Job Title"
+                        android:padding="4dp"
+                        android:inputType="text|textCapWords"
+                        android:maxLines="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:textCursorDrawable="@null"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginBottom="15dp"
+                        android:layout_marginRight="12dp"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!--Interned At-->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                app:cardElevation="@dimen/card_elevation"
+                app:cardCornerRadius="5dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_margin="12dp"
+                        android:textColor="#000"
+                        android:textSize="15dp"
+                        android:padding="4dp"
+                        android:layout_gravity="center_vertical"
+                        android:text="Interned At"/>
+
+                    <EditText
+                        android:id="@+id/internCompany"
+                        android:hint="Name of Company Interned at"
+                        android:padding="4dp"
+                        android:inputType="text|textCapWords"
+                        android:maxLines="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:textCursorDrawable="@null"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginBottom="15dp"
+                        android:layout_marginRight="12dp"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!--Profile image-->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                app:cardElevation="@dimen/card_elevation"
+                app:cardCornerRadius="5dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_margin="12dp"
+                        android:textColor="#000"
+                        android:textSize="15dp"
+                        android:padding="4dp"
+                        android:layout_gravity="center_vertical"
+                        android:text="Upload Profile Image"/>
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/photoPickerButton"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginBottom="15dp"
+                        android:layout_marginRight="12dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/user_avtar" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!--Project Description-->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                app:cardElevation="@dimen/card_elevation"
+                app:cardCornerRadius="5dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_margin="12dp"
+                        android:textColor="#000"
+                        android:textSize="15dp"
+                        android:padding="4dp"
+                        android:layout_gravity="center_vertical"
+                        android:text="Any Major Project?"/>
+
+                    <EditText
+                        android:id="@+id/projectDesc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Project Description"
+                        android:padding="10dp"
+                        android:inputType="textMultiLine"
+                        android:layout_gravity="center_horizontal"
+                        android:maxLines="13"
+                        android:singleLine="true"
+                        android:scrollbarStyle="insideInset"
+                        android:scrollbars="vertical"
+                        android:scrollHorizontally="false"
+                        android:textCursorDrawable="@null"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginBottom="15dp"
+                        android:layout_marginRight="12dp"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <!--Online Round-->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                app:cardElevation="@dimen/card_elevation"
+                app:cardCornerRadius="5dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_margin="12dp"
+                        android:textColor="#000"
+                        android:textSize="15dp"
+                        android:padding="4dp"
+                        android:layout_gravity="center_vertical"
+                        android:text="Online Round *"/>
+
+                    <EditText
+                        android:id="@+id/onlineRound"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Online Round Experience"
+                        android:padding="10dp"
+                        android:inputType="textMultiLine"
+                        android:layout_gravity="center_horizontal"
+                        android:maxLines="15"
+                        android:singleLine="true"
+                        android:scrollbarStyle="insideInset"
+                        android:scrollbars="vertical"
+                        android:scrollHorizontally="false"
+                        android:textCursorDrawable="@null"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginBottom="15dp"
+                        android:layout_marginRight="12dp"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!--Technical Round-->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                app:cardElevation="@dimen/card_elevation"
+                app:cardCornerRadius="5dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_margin="12dp"
+                        android:textColor="#000"
+                        android:textSize="15dp"
+                        android:padding="4dp"
+                        android:layout_gravity="center_vertical"
+                        android:text="Technical Round *"/>
+
+                    <EditText
+                        android:id="@+id/techRound"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Technical Round Experience"
+                        android:padding="10dp"
+                        android:inputType="textMultiLine"
+                        android:layout_gravity="center_horizontal"
+                        android:maxLines="15"
+                        android:singleLine="true"
+                        android:scrollbarStyle="insideInset"
+                        android:scrollbars="vertical"
+                        android:scrollHorizontally="false"
+                        android:textCursorDrawable="@null"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginBottom="15dp"
+                        android:layout_marginRight="12dp"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <!--Hr round-->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                app:cardElevation="@dimen/card_elevation"
+                app:cardCornerRadius="5dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_margin="12dp"
+                        android:textColor="#000"
+                        android:textSize="15dp"
+                        android:padding="4dp"
+                        android:layout_gravity="center_vertical"
+                        android:text="HR Round *"/>
+
+                    <EditText
+                        android:id="@+id/hrRound"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="HR Round Experience"
+                        android:padding="10dp"
+                        android:inputType="textMultiLine"
+                        android:layout_gravity="center_horizontal"
+                        android:maxLines="15"
+                        android:singleLine="true"
+                        android:scrollbarStyle="insideInset"
+                        android:scrollbars="vertical"
+                        android:scrollHorizontally="false"
+                        android:textCursorDrawable="@null"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginBottom="15dp"
+                        android:layout_marginRight="12dp"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!--Interview mode-->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                app:cardElevation="@dimen/card_elevation"
+                app:cardCornerRadius="5dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_margin="12dp"
+                        android:textColor="#000"
+                        android:textSize="15dp"
+                        android:padding="4dp"
+                        android:layout_gravity="center_vertical"
+                        android:text="How did you get the Interview? *"/>
+
+                    <Spinner
+                        android:id="@+id/interviewMode"
+                        android:layout_width="170dp"
+                        android:layout_height="35dp"
+                        android:background="@drawable/spinner_background"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginBottom="15dp"
+                        android:layout_marginRight="12dp"
+                        android:layout_weight="1"
+                        style="@android:style/Widget.Holo.Light.Spinner"
+                        android:dropDownVerticalOffset="-53dp"
+                        android:spinnerMode="dialog"></Spinner>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <!--Difficulty-->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                app:cardElevation="@dimen/card_elevation"
+                app:cardCornerRadius="5dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_margin="12dp"
+                        android:textColor="#000"
+                        android:textSize="15dp"
+                        android:padding="4dp"
+                        android:layout_gravity="center_vertical"
+                        android:text="Interview Difficulty *"/>
+
+                    <Spinner
+                        android:id="@+id/interviewDifficulty"
+                        android:layout_width="170dp"
+                        android:layout_height="35dp"
+                        android:background="@drawable/spinner_background"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginBottom="15dp"
+                        android:layout_marginRight="12dp"
+                        android:layout_weight="1"
+                        style="@android:style/Widget.Holo.Light.Spinner"
+                        android:dropDownVerticalOffset="-53dp"
+                        android:spinnerMode="dialog"></Spinner>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!--Tips-->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                app:cardElevation="@dimen/card_elevation"
+                app:cardCornerRadius="5dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_margin="12dp"
+                        android:textColor="#000"
+                        android:textSize="15dp"
+                        android:padding="4dp"
+                        android:layout_gravity="center_vertical"
+                        android:text="Tips"/>
+
+                    <EditText
+                        android:id="@+id/wordsToJr"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Any Tips?"
+                        android:padding="10dp"
+                        android:inputType="textMultiLine"
+                        android:layout_gravity="center_horizontal"
+                        android:maxLines="15"
+                        android:singleLine="true"
+                        android:scrollbarStyle="insideInset"
+                        android:scrollbars="vertical"
+                        android:scrollHorizontally="false"
+                        android:textCursorDrawable="@null"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginBottom="15dp"
+                        android:layout_marginRight="12dp"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!--Send Button-->
+            <Button
+                android:id="@+id/sendButton"
+                android:layout_width="wrap_content"
+                android:paddingLeft="32dp"
+                android:paddingRight="32dp"
+                android:paddingTop="2dp"
+                android:paddingBottom="2dp"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:fontFamily="@font/robotobold"
+                android:layout_marginTop="8dp"
+                android:textColor="#fff"
+                android:background="@drawable/my_button_bg"
+                android:textAllCaps="false"
+                android:layout_marginBottom="30dp"
+                android:text="Submit"/>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

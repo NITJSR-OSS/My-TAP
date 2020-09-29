@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.DeveloperActivity"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/white"
+        app:popupTheme="@style/AppTheme.PopupOverlay"
+        app:navigationIcon="@drawable/ic_arrow_back"
+        android:elevation="1dp"
+        tools:ignore="NotSibling">
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Developer"
+            android:textSize="16dp"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:titleTextAppearance="@style/bebasRegular"
+            android:textStyle="bold"/>
+    </androidx.appcompat.widget.Toolbar>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profileImg"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/user_avtar"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="12dp"
+        android:layout_gravity="center"></de.hdodenhof.circleimageview.CircleImageView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hi, This is Prince from CSE, NIT Jamshedpur - 2K17 batch."
+        android:textSize="18dp"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:layout_marginTop="4dp"
+        android:padding="8dp"
+        android:textStyle="bold"></TextView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Let's Connect:"
+        android:layout_marginTop="14dp"
+        android:layout_marginLeft="8dp"
+        android:textSize="14dp"></TextView>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp">
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:autoLink="web"
+            android:textSize="0dp"
+            android:text="https://www.linkedin.com/in/princenitjsr/"
+            android:background="@drawable/linkedin"></Button>
+
+        <Button
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:autoLink="web"
+            android:text="https://api.whatsapp.com/send?phone=+918107048217"
+            android:textSize="0dp"
+            android:background="@drawable/whatsapp1"
+            android:layout_marginLeft="10dp"></Button>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:textSize="14dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="1dp"
+        android:text="Contribute"/>
+
+    <RelativeLayout
+        android:layout_width="30dp"
+        android:layout_height="1dp"
+        android:background="@color/red"
+        android:layout_marginLeft="8dp"
+        android:layout_marginBottom="8dp"></RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="If you liked this project and want to contribute to it, Feel free to create a Pull request at:"
+        android:textSize="17sp"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:padding="8dp"
+        ></TextView>
+
+    <TextView
+        android:id="@+id/gitHub"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autoLink="web"
+        android:text="https://github.com/NITJSR-OSS/My-TAP"
+        android:textAlignment="center"
+        android:padding="4dp"></TextView>
+
+
+</LinearLayout>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".GoogleAuth.Login">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Login with:"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/slide_title"
+        android:layout_marginTop="200dp"
+        android:layout_marginLeft="50dp"/>
+
+    <RelativeLayout
+        android:id="@+id/line"
+        android:layout_width="40dp"
+        android:layout_height=".75dp"
+        android:background="@color/red"
+        android:layout_marginTop="4dp"
+        android:layout_below="@id/title"
+        android:layout_marginLeft="50dp"></RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_login_google"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/google_logo"
+        android:padding="4dp"
+        android:textSize="0dp"
+        android:textStyle="bold"
+        android:layout_below="@id/line"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="50dp"></Button>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="My TAP"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="@dimen/slide_desc"
+        android:layout_alignParentBottom="true"
+        android:textAlignment="center"
+        android:layout_marginBottom="60dp"/>
+
+</RelativeLayout>

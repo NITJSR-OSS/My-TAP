@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">My TAP</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_brochure">Brochure</string>
+    <string name="menu_website">Website</string>
+    <string name="menu_logout">Log out</string>
+    <string name="menu_share">Share</string>
+    <string name="menu_rate">Feedback</string>
+    <string name="menu_privacy_policy">Privacy Policy</string>
+    <string name="menu_developer">Developer</string>
+
+    <!--Intro slider Texts-->
+    <string name="next">NEXT</string>
+    <string name="start">GOT IT</string>
+
+    <string name="slide_1_title"> My TAP</string>
+    <string name="slide_1_desc">Welcome to My TAP : A Portal for NIT Jamshedpur students to View and Share their Interview Experiences.</string>
+
+    <string name="slide_2_title">Interview Experiences</string>
+    <string name="slide_2_desc">Read Placement and Internship Interview Experiences posted by the students of NIT Jamshedpur.</string>
+
+    <string name="slide_3_title">Add Experience</string>
+    <string name="slide_3_desc">Share your Placement or Internship Interview Experience to help others </string>
+
+    <string name="slide_4_title">Extras</string>
+    <string name="slide_4_desc">Know the Past Recruiters and Placement Statistics of NIT Jamshedpur</string>
+
+</resources>
